@@ -1,9 +1,9 @@
 {
 	"parameters": {
-		"scripts" : ["/Blossom/meleeweapon.lua"],
-		"animationScripts" : ["/items/active/effects/chain.lua"],
+		"scripts": ["/Blossom/meleeweapon.lua"],
+		"animationScripts": ["/items/active/effects/chain.lua"],
 		"inventoryIcon": "/interface/statuses/attack.png?crop=0;0;1;1?multiply=0000?replace;0000=4444?border=1;ccc0;0000?scale=.8;.6?replace;0000=007878;4440=008878;8881=088;9990=007888?scale=1;15.5?crop=0;0;2;16?replace;008778=007878;008788=007888?scale=15.5;1?crop=0;0;16;16?replace;00787a=000;00787b=001;00787c=001;00787d=001;00787e=001;00787f=001;007880=001;007881=001;007882=001;007883=001;007884=001;007885=000;007979=000;00797a=002;00797b=002;00797c=002;00797d=002;00797e=002;00797f=002;007980=002;007981=002;007982=002;007983=002;007984=002;007985=002;007986=000;007a78=000;007a79=002;007a7a=003;007a7b=004;007a7c=002;007a7d=002;007a7e=002;007a7f=002;007a80=002;007a81=002;007a82=002;007a83=000;007a84=001;007a85=000;007a86=002;007a87=000;007b78=001;007b79=002;007b7a=003;007b7b=001;007b7c=000;007b7d=002;007b7e=002;007b7f=003;007b80=002;007b81=002;007b82=000;007b83=001;007b84=001;007b85=000;007b86=002;007b87=001;007c78=001;007c79=002;007c7a=002;007c7b=001;007c7c=001;007c7d=004;007c7e=005;007c7f=004;007c80=002;007c81=000;007c82=000;007c83=001;007c84=001;007c85=000;007c86=002;007c87=001;007d78=001;007d79=002;007d7a=002;007d7b=002;007d7c=000;007d7d=005;007d7e=003;007d7f=006;007d81=000;007d82=000;007d83=001;007d84=000;007d85=002;007d86=002;007d87=001;007e78=001;007e79=002;007e7a=002;007e7b=002;007e7c=004;007e7d=005;007e7e=004;007e7f=006;007e80=007;007e82=000;007e83=001;007e84=002;007e85=002;007e86=002;007e87=001;007f78=001;007f79=002;007f7a=002;007f7b=002;007f7c=008;007f7d=005;007f7e=006;007f7f=006;007f80=007;007f81=009;007f82=005;007f83=002;007f84=002;007f85=002;007f86=002;007f87=001;008078=001;008079=002;00807a=002;00807b=002;00807c=002;00807d=003;00807e=000;00807f=000;008080=007;008081=009;008082=009;008083=005;008084=002;008085=002;008086=002;008087=001;008178=001;008179=002;00817a=002;00817b=002;00817c=006;00817d=007;00817e=006;00817f=000;008180=000;008181=009;008182=009;008183=006;008184=005;008185=002;008186=002;008187=001;008278=001;008279=002;00827a=002;00827b=008;00827c=006;00827d=009;00827e=006;00827f=006;008280=000;008281=002;008282=009;008283=007;008284=006;008285=005;008286=002;008287=001;008378=001;008379=002;00837a=008;00837b=004;00837c=008;00837d=009;00837e=007;00837f=007;008380=002;008381=002;008382=002;008383=007;008384=006;008385=005;008386=002;008387=001;008478=001;008479=002;00847a=008;00847b=004;00847c=005;00847d=004;00847e=006;00847f=002;008480=002;008481=002;008482=002;008483=002;008484=006;008485=005;008486=002;008487=001;008578=000;008579=002;00857a=002;00857b=008;00857c=005;00857d=003;00857e=004;00857f=002;008580=002;008581=002;008582=002;008583=002;008584=002;008585=005;008586=002;008587=000;008679=000;00867a=002;00867b=002;00867c=008;00867d=004;00867e=002;00867f=002;008680=002;008681=002;008682=002;008683=002;008684=002;008685=002;008686=000?multiply=fff0?replace;0000=b19ba8;0010=fff0ff;0020=181924;0030=d6bc6c;0040=936a29;0050=fcf9c1;0060=6a2c69;0070=ba3669;0080=562f13;0090=e76087;007d8000=ffbac2;007e8100=ffbac2",
-		"shortdescription": "^#ffbac2;\"Blossom\"",
+		"shortdescription": "^#ffbac2;\"Blossom\"^reset;",
 		"description": "^gray;A ceremonial sword, presiding over the Rite of Transience.\n^#e76087;[PRIMARY] ^#eee;grants ^#ffbac2;Charges^#eee;, ^#e76087;[ALT] ^#eee;consumes ^#ffbac2;Charges ^#eee;to perform a forward slice.",
 		"category": "uniqueWeapon",
 		"rarity": "essential",
@@ -34,22 +34,22 @@
 		"blossomSkillCharges": 0,
 		"judgementSlashRadius": 15,
 		"primaryAbility": {
-			"scripts" : ["/Blossom/blossomCombo.lua"],
+			"scripts": ["/Blossom/blossomCombo.lua"],
 			"class": "BlossomCombo",
 			"activatingFireMode": "primary",
 			"baseDps": 12,
 			"altConfig": {
 				"baseDamage": 11,
 				"knockback": 0,
-				"timeout":0.1,
+				"timeout": 0.1,
 				"knockbackMode": "aim",
 				"statusEffects": [{
-					"duration": 0.25,
-					"effect": "staffslow"
-				}, {
-					"duration": 0.5,
-					"effect": "paralysis"
-				}],
+						"duration": 0.25,
+						"effect": "staffslow"
+					}, {
+						"duration": 0.5,
+						"effect": "paralysis"
+					}],
 				"damageSourceKind": "broadsword"
 			},
 			"damageConfig": {
@@ -62,12 +62,12 @@
 					"baseDamageFactor": 0.7,
 					"knockback": 15,
 					"statusEffects": [{
-						"duration": 0.25,
-						"effect": "staffslow"
-					}, {
-						"duration": 0.5,
-						"effect": "paralysis"
-					}]
+							"duration": 0.25,
+							"effect": "staffslow"
+						}, {
+							"duration": 0.5,
+							"effect": "paralysis"
+						}]
 				}, {
 					"baseDamageFactor": 0.75,
 					"knockback": 15
@@ -78,37 +78,37 @@
 					"baseDamageFactor": 0.4,
 					"knockback": 10,
 					"statusEffects": [{
-						"duration": 0.25,
-						"effect": "staffslow"
-					}]
+							"duration": 0.25,
+							"effect": "staffslow"
+						}]
 				}, {
 					"baseDamageFactor": 0.5,
 					"knockback": 10,
 					"statusEffects": [{
-						"duration": 0.25,
-						"effect": "staffslow"
-					}]
+							"duration": 0.25,
+							"effect": "staffslow"
+						}]
 				}, {
 					"baseDamageFactor": 0.6,
 					"knockback": 15,
 					"statusEffects": [{
-						"duration": 0.25,
-						"effect": "staffslow"
-					}]
+							"duration": 0.25,
+							"effect": "staffslow"
+						}]
 				}, {
 					"baseDamageFactor": 0.9,
 					"knockback": 15
 				}, {
 					"baseDamageFactor": 0.5,
 					"knockback": 15,
-					"timeout":0.1,
+					"timeout": 0.1,
 					"statusEffects": [{
-						"duration": 0.1,
-						"effect": "staffslow"
-					}, {
-						"duration": 0.15,
-						"effect": "paralysis"
-					}]
+							"duration": 0.1,
+							"effect": "staffslow"
+						}, {
+							"duration": 0.15,
+							"effect": "paralysis"
+						}]
 				}],
 			"fireTime": 0.83,
 			"comboSteps": 8,
@@ -125,7 +125,8 @@
 					"aimAngle": 0,
 					"animationStates": {
 						"pinkKatana": "sheathing",
-						"swoosh": "idle"
+						"swoosh": "idle",
+						"swoosh_ring": "idle"
 					}
 				},
 				"windup1": {
@@ -159,7 +160,7 @@
 					"armRotation": 0,
 					"weaponRotation": 90,
 					"weaponOffset": [0, -2],
-					"burstParticleEmitters":["tempest"],
+					"burstParticleEmitters": ["tempest"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": false,
@@ -183,15 +184,15 @@
 					"weaponRotation": 130,
 					"armRotation": -50,
 					"weaponOffset": [0.3, -0.6],
-					"burstParticleEmitters":["drawSpark"],
+					"burstParticleEmitters": ["drawSpark"],
 					"allowRotate": true,
 					"allowFlip": true,
 					"twoHanded": true,
 					"duration": 0.15,
-					"aimAngle":0,
+					"aimAngle": 0,
 					"animationStates": {
 						"pinkKatana": "unsheathing",
-						"swoosh":"idle"
+						"swoosh": "idle"
 					}
 				},
 				"preslash2": {
@@ -211,7 +212,7 @@
 					"armRotation": 65,
 					"weaponRotation": -155,
 					"weaponOffset": [0, 0],
-					"playSounds":["rend"],
+					"playSounds": ["rend"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -240,10 +241,10 @@
 					"allowFlip": true,
 					"twoHanded": true,
 					"duration": 0.15,
-					"aimAngle":0,
+					"aimAngle": 0,
 					"animationStates": {
 						"pinkKatana": "topSpin",
-						"swoosh":"topSpin"
+						"swoosh": "topSpin"
 					}
 				},
 				"preslash3": {
@@ -258,7 +259,7 @@
 					"duration": 0.15,
 					"animationStates": {
 						"pinkKatana": "default",
-						"swoosh":"idle"
+						"swoosh": "idle"
 					}
 				},
 				"fire3": {
@@ -266,7 +267,7 @@
 					"armRotation": -120,
 					"weaponRotation": -150,
 					"weaponOffset": [0, 0],
-					"playSounds":["rend2"],
+					"playSounds": ["rend2"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -293,7 +294,7 @@
 					"weaponRotation": 140,
 					"armRotation": -40,
 					"weaponOffset": [0.3, -0.6],
-					"playSounds":["clack"],
+					"playSounds": ["clack"],
 					"allowRotate": false,
 					"allowFlip": true,
 					"twoHanded": true,
@@ -301,8 +302,8 @@
 					"aimAngle": 0,
 					"animationStates": {
 						"pinkKatana": "sheathing",
-						"swoosh":"idle",
-						"swoosh_ring" : "ring"
+						"swoosh": "idle",
+						"swoosh_ring": "ring"
 					}
 				},
 				"fire4": {
@@ -313,8 +314,8 @@
 					"weaponRotation": 140,
 					"armRotation": -40,
 					"weaponOffset": [0.3, -0.6],
-					"burstParticleEmitters":["drawSpark"],
-					"playSounds":["spaceCut"],
+					"burstParticleEmitters": ["drawSpark"],
+					"playSounds": ["spaceCut"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -344,15 +345,15 @@
 					"weaponRotation": 140,
 					"armRotation": -50,
 					"weaponOffset": [0.3, -0.6],
-					"playSounds":["clack"],
+					"playSounds": ["clack"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
 					"duration": 0.1,
 					"animationStates": {
 						"pinkKatana": "sheathing",
-						"swoosh":"idle",
-						"swoosh_ring" : "ring"
+						"swoosh": "idle",
+						"swoosh_ring": "ring"
 					}
 				},
 				"fire5": {
@@ -363,8 +364,8 @@
 					"weaponRotation": 140,
 					"armRotation": -50,
 					"weaponOffset": [0.3, -0.6],
-					"burstParticleEmitters":["drawSpark"],
-					"playSounds":["spaceCut"],
+					"burstParticleEmitters": ["drawSpark"],
+					"playSounds": ["spaceCut"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -394,15 +395,15 @@
 					"weaponRotation": 140,
 					"armRotation": -60,
 					"weaponOffset": [0.3, -0.6],
-					"playSounds":["clack"],
+					"playSounds": ["clack"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
 					"duration": 0.1,
 					"animationStates": {
 						"pinkKatana": "sheathing",
-						"swoosh":"idle",
-						"swoosh_ring" : "ring"
+						"swoosh": "idle",
+						"swoosh_ring": "ring"
 					}
 				},
 				"fire6": {
@@ -413,8 +414,8 @@
 					"weaponRotation": 140,
 					"armRotation": -60,
 					"weaponOffset": [0.3, -0.6],
-					"burstParticleEmitters":["drawSpark"],
-					"playSounds":["spaceCut"],
+					"burstParticleEmitters": ["drawSpark"],
+					"playSounds": ["spaceCut"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -469,7 +470,7 @@
 					"armRotation": 55,
 					"weaponRotation": -130,
 					"weaponOffset": [0, 0],
-					"playSounds":["rend5","shhhh"],
+					"playSounds": ["rend5", "shhhh"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -492,7 +493,7 @@
 					"armAngularVelocity": 200,
 					"armRotation": 60,
 					"weaponRotation": -130,
-					"weaponOffset": [0,0],
+					"weaponOffset": [0, 0],
 					"allowRotate": false,
 					"allowFlip": true,
 					"twoHanded": true,
@@ -504,11 +505,11 @@
 					}
 				},
 				"preslash8": {
-					"armRotation" : 65,
-					"weaponRotation" : -120,
-					"weaponAngularVelocity":855,
-					"armAngularVelocity":-555,
-					"weaponOffset" : [0, 0],
+					"armRotation": 65,
+					"weaponRotation": -120,
+					"weaponAngularVelocity": 855,
+					"armAngularVelocity": -555,
+					"weaponOffset": [0, 0],
 					"allowRotate": false,
 					"allowFlip": true,
 					"twoHanded": true,
@@ -518,13 +519,13 @@
 					}
 				},
 				"fire8": {
-					"frontArmFrame":"run.3",
-					"backArmFrame":"run.3",
-					"armAngularVelocity":10,
-					"armRotation" : 10,
-					"weaponRotation" : -25,
-					"weaponOffset" : [-0.2, -1],
-					"burstParticleEmitters":["drawSpark","tempest"],
+					"frontArmFrame": "run.3",
+					"backArmFrame": "run.3",
+					"armAngularVelocity": 10,
+					"armRotation": 10,
+					"weaponRotation": -25,
+					"weaponOffset": [-0.2, -1],
+					"burstParticleEmitters": ["drawSpark", "tempest"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -532,7 +533,7 @@
 					"aimAngle": 0,
 					"animationStates": {
 						"pinkKatana": "default",
-						"swoosh_ring":"ring"
+						"swoosh_ring": "ring"
 					}
 				},
 				"altWindup": {
@@ -541,8 +542,8 @@
 					"armRotation": 85,
 					"weaponRotation": 0,
 					"weaponOffset": [0, 0],
-					"burstParticleEmitters":["drawSpark"],
-					"playSounds":["shhhh"],
+					"burstParticleEmitters": ["drawSpark"],
+					"playSounds": ["shhhh"],
 					"hold": false,
 					"allowRotate": false,
 					"allowFlip": false,
@@ -550,15 +551,15 @@
 					"duration": 0.1,
 					"animationStates": {
 						"pinkKatana": "default",
-						"swoosh":"idle",
-						"swoosh_ring":"ring"
+						"swoosh": "idle",
+						"swoosh_ring": "ring"
 					}
 				},
 				"altPreslash": {
 					"armRotation": -30,
 					"weaponRotation": -60,
 					"weaponOffset": [0, 0],
-					"playSounds":["rend3"],
+					"playSounds": ["rend3"],
 					"hold": false,
 					"allowRotate": false,
 					"allowFlip": false,
@@ -566,7 +567,7 @@
 					"duration": 0.05,
 					"animationStates": {
 						"pinkKatana": "default",
-						"swoosh":"idle"
+						"swoosh": "idle"
 					}
 				},
 				"altFire": {
@@ -574,8 +575,8 @@
 					"armRotation": -120,
 					"weaponRotation": -150,
 					"weaponOffset": [0, 0],
-					"aimDirection":-1,
-					"playSounds":["rend","spaceCut","rend4"],
+					"aimDirection": -1,
+					"playSounds": ["rend", "spaceCut", "rend4"],
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -589,7 +590,7 @@
 					"armRotation": -123,
 					"weaponRotation": -150,
 					"weaponOffset": [0, 0],
-					"aimDirection":-1,
+					"aimDirection": -1,
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -602,7 +603,7 @@
 					"armRotation": -125,
 					"weaponRotation": -150,
 					"weaponOffset": [0, 0],
-					"aimDirection":-1,
+					"aimDirection": -1,
 					"allowRotate": false,
 					"allowFlip": false,
 					"twoHanded": true,
@@ -694,7 +695,7 @@
 				"rend5": {
 					"pitchMultiplier": 0.5,
 					"volume": 0.8,
-					"pool": ["/sfx/melee/charge_traildash2.ogg","/sfx/melee/charge_traildash3.ogg"]
+					"pool": ["/sfx/melee/charge_traildash2.ogg", "/sfx/melee/charge_traildash3.ogg"]
 				},
 				"spaceCut": {
 					"pitchMultiplier": 1.5,
@@ -702,19 +703,19 @@
 					"pool": ["/sfx/melee/astraltear1.ogg", "/sfx/melee/astraltear2.ogg"]
 				}
 			},
-			"sheath_config":{
-				"renderLayerLeft":"Player",
-				"renderLayerRight":"Player-1",
-				"hipSheath_Rotation":"-0.8",
-				"hipSheath_PositionX":"-0.15",
-				"hipSheath_PositionY":"-1.25",
-				"hipSheath":"/assetmissing.png?crop=0;0;1;1?multiply=0000?replace;0000=4444?border=1;ccc0;0000?scale=.8;.6?replace;0000=007d6c;4440=00866c;8881=008694;9990=007d94?scale=1;8.5?crop=0;0;2;9?scale=39.499966;1?crop=0;0;40;9?replace;007d7e=000;007e7e=001;007e7f=000;007e82=000;007f6c=002;007f6d=003;007f6e=004;007f6f=005;007f70=005;007f71=006;007f72=006;007f73=007;007f74=007;007f75=007;007f76=007;007f77=007;007f78=007;007f79=007;007f7a=007;007f7b=005;007f7c=008;007f7d=008;007f7e=001;007f7f=001;007f81=000;007f82=001;00806c=002;00806d=002;00806e=004;00806f=006;008070=007;008071=007;008072=007;008073=007;008074=007;008075=007;008076=007;008077=007;008078=007;008079=007;00807a=007;00807b=008;00807c=000;00807d=008;00807e=000;00807f=001;008080=000;008081=001;008082=001;008083=009;00816c=004;00816d=003;00816e=009;00816f=005;008170=005;008171=005;008172=005;008173=005;008174=005;008175=005;008176=005;008177=005;008178=005;008179=006;00817a=006;00817b=008;00817c=000;00817d=000;00817e=008;00817f=000;008180=008;008181=001;008182=003;008183=004;00827c=008;00827d=000;00827e=000;00827f=008;008280=008;008281=008;008282=004;008283=009?multiply=fff0?replace;0000=ba3669;0010=e76087;0020=fcf9c1;0030=d6bc6c;0040=936a29;0050=786378;0060=b19ba8;0070=fff0ff;0080=6a2c69;0090=562f13"
+			"sheath_config": {
+				"renderLayerLeft": "Player",
+				"renderLayerRight": "Player-1",
+				"hipSheath_Rotation": "-0.8",
+				"hipSheath_PositionX": "-0.15",
+				"hipSheath_PositionY": "-1.25",
+				"hipSheath": "/assetmissing.png?crop=0;0;1;1?multiply=0000?replace;0000=4444?border=1;ccc0;0000?scale=.8;.6?replace;0000=007d6c;4440=00866c;8881=008694;9990=007d94?scale=1;8.5?crop=0;0;2;9?scale=39.499966;1?crop=0;0;40;9?replace;007d7e=000;007e7e=001;007e7f=000;007e82=000;007f6c=002;007f6d=003;007f6e=004;007f6f=005;007f70=005;007f71=006;007f72=006;007f73=007;007f74=007;007f75=007;007f76=007;007f77=007;007f78=007;007f79=007;007f7a=007;007f7b=005;007f7c=008;007f7d=008;007f7e=001;007f7f=001;007f81=000;007f82=001;00806c=002;00806d=002;00806e=004;00806f=006;008070=007;008071=007;008072=007;008073=007;008074=007;008075=007;008076=007;008077=007;008078=007;008079=007;00807a=007;00807b=008;00807c=000;00807d=008;00807e=000;00807f=001;008080=000;008081=001;008082=001;008083=009;00816c=004;00816d=003;00816e=009;00816f=005;008170=005;008171=005;008172=005;008173=005;008174=005;008175=005;008176=005;008177=005;008178=005;008179=006;00817a=006;00817b=008;00817c=000;00817d=000;00817e=008;00817f=000;008180=008;008181=001;008182=003;008183=004;00827c=008;00827d=000;00827e=000;00827f=008;008280=008;008281=008;008282=004;008283=009?multiply=fff0?replace;0000=ba3669;0010=e76087;0020=fcf9c1;0030=d6bc6c;0040=936a29;0050=786378;0060=b19ba8;0070=fff0ff;0080=6a2c69;0090=562f13"
 			},
 			"globalTagDefaults": {
 				"swp": "/projectiles/npcs/swipe/swipe.png",
 				"swsh_RC": "?replace;E7EFF7=ffbac2;94DEE7=e76087;52C6D6=ba3669;a7e2f4=e76087;7ad1eb=ba3669;",
 				"bladeSpin": "?replace;E6E8FE=ffbac2;E7E9FE=ffbac2;8DBCFF=e76087;8DBCFFFE=e76087;57A1FF=ba3669;57A1FFFE=ba3669;",
-				"fb":"/assetmissing.png?crop=0;0;1;1?multiply=0000?replace;0000=4444?border=1;ccc0;0000?scale=.8;.6?replace;0000=00647b;4440=008c7b;8881=008c84;9990=006484?scale=1;39.499966?crop=0;0;2;40?replace;00787b=00777b;007884=007784;007b7b=00777a;007b84=007783;007c7b=00777a;007c84=007783?scale=8.5;1?crop=0;0;9;40?replace;00747e=000;00747f=000;007480=001;00757e=000;00757f=000;007580=001;00767e=002;00767f=000;007680=003;00777e=002;00777f=002;007780=003;00797e=000;00797f=002;007980=003;007a7f=002;007a80=003;007d7f=002;007d80=002;007d81=001;007e80=002;007e81=001;007f80=003;007f81=001;008080=003;008081=001;008180=003;008181=004;008280=003;008281=004;008380=003;008381=004;008480=002;008481=004;00857f=000;008580=002;008581=004;00867f=000;008680=002;008681=004;00877f=002;008780=000;008781=004;00887f=000;008880=000;008881=004;00897f=000;008980=000;008981=004;008a7f=000;008a80=004;008b7f=004?multiply=fff0?replace;0000=6a2c69;0010=ffbac2;0020=ba3669;0030=e76087;0040=fcf9c1",
+				"fb": "/assetmissing.png?crop=0;0;1;1?multiply=0000?replace;0000=4444?border=1;ccc0;0000?scale=.8;.6?replace;0000=00647b;4440=008c7b;8881=008c84;9990=006484?scale=1;39.499966?crop=0;0;2;40?replace;00787b=00777b;007884=007784;007b7b=00777a;007b84=007783;007c7b=00777a;007c84=007783?scale=8.5;1?crop=0;0;9;40?replace;00747e=000;00747f=000;007480=001;00757e=000;00757f=000;007580=001;00767e=002;00767f=000;007680=003;00777e=002;00777f=002;007780=003;00797e=000;00797f=002;007980=003;007a7f=002;007a80=003;007d7f=002;007d80=002;007d81=001;007e80=002;007e81=001;007f80=003;007f81=001;008080=003;008081=001;008180=003;008181=004;008280=003;008281=004;008380=003;008381=004;008480=002;008481=004;00857f=000;008580=002;008581=004;00867f=000;008680=002;008681=004;00877f=002;008780=000;008781=004;00887f=000;008880=000;008881=004;00897f=000;008980=000;008981=004;008a7f=000;008a80=004;008b7f=004?multiply=fff0?replace;0000=6a2c69;0010=ffbac2;0020=ba3669;0030=e76087;0040=fcf9c1",
 				"weapon": "/assetmissing.png?crop=0;0;1;1?multiply=0000?replace;0000=4444?border=1;ccc0;0000?scale=.8;.6?replace;0000=006c7b;4440=00947b;8881=009484;9990=006c84?scale=1;39.499966?crop=0;0;2;40?replace;00807b=007f7b;008084=007f84;00837b=007f7a;008384=007f83;00847b=007f7a;008484=007f83?scale=8.5;1?crop=0;0;9;40?replace;006c7c=000;006c7d=000;006c7e=001;006d7c=002;006d7d=000;006d7e=003;006e7c=004;006e7d=005;006e7e=004;006f7c=004;006f7d=006;006f7e=004;00707c=004;00707d=006;00707e=004;00717d=006;00717e=005;00727d=006;00727e=005;00737d=006;00737e=006;00747d=005;00747e=006;00747f=005;00757e=006;00757f=005;00767e=006;00767f=005;00777e=006;00777f=004;00787e=005;00787f=004;007880=004;00797e=002;00797f=000;007980=001;007981=002;007982=003;007a7c=002;007a7d=000;007a7e=000;007a7f=000;007a80=003;007b7e=001;007b7f=002;007b80=002;007c7e=007;007c7f=007;007c80=008;007d7e=007;007d7f=007;007d80=008;007e7e=009;007e7f=007;007e80=00a;007f7e=009;007f7f=009;007f80=00a;00817e=007;00817f=009;008180=00a;00827f=009;008280=00a;00857f=009;008580=009;008581=008;008680=009;008681=008;008780=00a;008781=008;008880=00a;008881=008;008980=00a;008981=000;008a80=00a;008a81=000;008b80=00a;008b81=000;008c80=009;008c81=000;008d7f=007;008d80=009;008d81=000;008e7f=007;008e80=009;008e81=000;008f7f=009;008f80=007;008f81=000;00907f=007;009080=007;009081=000;00917f=007;009180=007;009181=000;00927f=007;009280=000;00937f=000?multiply=fff0?replace;0000=fcf9c1;0010=936a29;0020=d6bc6c;0030=562f13;0040=786378;0050=b19ba8;0060=fff0ff;0070=6a2c69;0080=ffbac2;0090=ba3669;00a0=e76087",
 				"sheathe": "/assetmissing.png?crop=0;0;1;1?multiply=0000?replace;0000=4444?border=1;ccc0;0000?scale=.8;.6?replace;0000=00647b;4440=008c7b;8881=008c84;9990=006484?scale=1;39.499966?crop=0;0;2;40?replace;00807b=000;008084=001;00817b=000;008184=001;00827b=000;008284=001;00837b=000;008384=001;00847b=000;008484=001?replace;000=007f7b;001=007f84?scale=8.5;1?crop=0;0;9;40?replace;00747e=000;00747f=001;007480=000;00757e=001;00757f=002;007580=003;007581=003;007582=004;00767e=005;00767f=003;007680=003;007681=004;00777e=005;00777f=005;007780=004;00787e=005;00787f=004;007880=003;007881=003;007882=004;00797e=004;00797f=005;007980=004;007981=003;007982=003;007983=004;007a7e=004;007a7f=004;007a80=005;007a81=005;007b7e=005;007b7f=004;007b80=004;007b81=005;007c7f=005;007c80=005;007c81=006;007d7f=007;007d80=008;007d81=008;007e7f=007;007e80=008;007e81=008;007f7f=006;007f80=008;007f81=008;00857f=006;008580=008;008581=007;00867f=006;008680=008;008681=007;00877f=006;008780=008;008781=006;00887f=006;008880=007;008881=006;00897f=000;008980=001;008981=001;008a7f=002;008a80=009;008a81=002;008b7f=001;008b80=009;008b81=009?multiply=fff0?replace;0000=562f13;0010=936a29;0020=d6bc6c;0030=e76087;0040=ba3669;0050=6a2c69;0060=786378;0070=b19ba8;0080=fff0ff;0090=fcf9c1"
 			},
@@ -732,8 +733,7 @@
 									"particleEmittersOff": []
 								}
 							},
-							"sheathed": {
-							},
+							"sheathed": {},
 							"unsheathing": {
 								"frameProperties": {
 									"immediateSound": ["/sfx/gun/reload/grenade_reload_clip2.ogg", "", "", ""]
@@ -762,12 +762,6 @@
 						"states": {
 							"idle": {},
 							"ring": {
-								"mode": "transition",
-								"cycle": 0.1,
-								"frames": 3,
-								"transition": "idle"
-							},
-							"ringGuard": {
 								"mode": "transition",
 								"cycle": 0.1,
 								"frames": 3,
@@ -840,12 +834,7 @@
 									"particleEmittersOn": ["tempestEmitter"]
 								},
 								"frameProperties": {
-									"immediateSound": [
-									"/sfx/melee/sword_spinslash.ogg", "", "",
-									"/sfx/melee/swing_shortsword.ogg", "", "",
-									"/sfx/melee/swing_broadsword.ogg", "", "",
-									"/sfx/melee/swing_hammer.ogg", "", ""
-									]
+									"immediateSound": ["/sfx/melee/sword_spinslash.ogg", "", "", "/sfx/melee/swing_shortsword.ogg", "", "", "/sfx/melee/swing_broadsword.ogg", "", "", "/sfx/melee/swing_hammer.ogg", "", ""]
 								},
 								"mode": "transition",
 								"cycle": 0.42,
@@ -888,26 +877,16 @@
 									}
 								},
 								"unsheathing": {
-									"frameProperties":{
-										"offset": [
-											[0, 1.5],
-											[0, 1.3],
-											[0, 1.2],
-											[0, 1.1]
-										]
+									"frameProperties": {
+										"offset": [[0, 1.5], [0, 1.3], [0, 1.2], [0, 1.1]]
 									},
 									"properties": {
 										"image": "<weapon>?flipx"
 									}
 								},
 								"sheathing": {
-									"frameProperties":{
-										"offset": [
-											[0, 1.1],
-											[0, 1.2],
-											[0, 1.3],
-											[0, 1.5]
-										]
+									"frameProperties": {
+										"offset": [[0, 1.1], [0, 1.2], [0, 1.3], [0, 1.5]]
 									},
 									"properties": {
 										"image": "<weapon>?flipx"
@@ -927,7 +906,7 @@
 							"offset": [0, 1.5],
 							"zLevel": 1,
 							"transformationGroups": ["weapon"],
-							"fullbright" : true
+							"fullbright": true
 						},
 						"partStates": {
 							"pinkKatana": {
@@ -947,26 +926,16 @@
 									}
 								},
 								"unsheathing": {
-									"frameProperties":{
-										"offset": [
-											[0, 1.5],
-											[0, 1.3],
-											[0, 1.2],
-											[0, 1.1]
-										]
+									"frameProperties": {
+										"offset": [[0, 1.5], [0, 1.3], [0, 1.2], [0, 1.1]]
 									},
 									"properties": {
 										"image": "<fb>?flipx"
 									}
 								},
 								"sheathing": {
-									"frameProperties":{
-										"offset": [
-											[0, 1.1],
-											[0, 1.2],
-											[0, 1.3],
-											[0, 1.5]
-										]
+									"frameProperties": {
+										"offset": [[0, 1.1], [0, 1.2], [0, 1.3], [0, 1.5]]
 									},
 									"properties": {
 										"image": "<fb>?flipx"
@@ -1007,59 +976,47 @@
 							}
 						}
 					},
-					"swoosh_ring" : {
-						"properties" : {
-							"fullbright" : true,
-							"zLevel" : 3,
-							"transformationGroups" : ["weapon"],
-							"offset" : [0, 0]
+					"swoosh_ring": {
+						"properties": {
+							"fullbright": true,
+							"zLevel": 3,
+							"transformationGroups": ["weapon"],
+							"offset": [0, 0]
 						},
-						"partStates" : {
-							"swoosh_ring" : {
-								"ring" : {
-									"properties" : {
-										"offset" : [0, 0.35],
-										"image" : "<swp>:<frame><swsh_RC>"
+						"partStates": {
+							"swoosh_ring": {
+								"ring": {
+									"properties": {
+										"offset": [0, 0.35],
+										"image": "<swp>:<frame><swsh_RC>"
 									}
 								},
-								"ringGuard" : {
-									"properties" : {
-										"offset" : [0, 1],
-										"image" : "<swp>:<frame><swsh_RC>"
-									}
-								},
-								"idle" : {
-									"properties" : {
-										"image" : ""
+								"idle": {
+									"properties": {
+										"image": ""
 									}
 								}
 							}
 						}
 					},
-					"swoosh_ring2" : {
-						"properties" : {
-							"fullbright" : true,
-							"zLevel" : 3,
-							"transformationGroups" : ["weapon"],
-							"offset" : [0, 0]
+					"swoosh_ring2": {
+						"properties": {
+							"fullbright": true,
+							"zLevel": 3,
+							"transformationGroups": ["weapon"],
+							"offset": [0, 0]
 						},
-						"partStates" : {
-							"swoosh_ring" : {
-								"ring" : {
-									"properties" : {
-										"offset" : [0, 0.35],
-										"image" : "<swp>:<frame>?flipxy<swsh_RC>"
+						"partStates": {
+							"swoosh_ring": {
+								"ring": {
+									"properties": {
+										"offset": [0, 0.35],
+										"image": "<swp>:<frame>?flipxy<swsh_RC>"
 									}
 								},
-								"ringGuard" : {
-									"properties" : {
-										"offset" : [0, 1],
-										"image" : "<swp>:<frame>?flipxy<swsh_RC>"
-									}
-								},
-								"idle" : {
-									"properties" : {
-										"image" : ""
+								"idle": {
+									"properties": {
+										"image": ""
 									}
 								}
 							}
@@ -1067,7 +1024,8 @@
 					},
 					"swoosh": {
 						"properties": {
-							"zLevel": 3, "fullbright":true,
+							"zLevel": 3,
+							"fullbright": true,
 							"transformationGroups": ["swoosh"]
 						},
 						"partStates": {
@@ -1134,19 +1092,19 @@
 									}
 								},
 								"fire8": {
-									"frameProperties":{
-										"image":[
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:3<swsh_RC>?scalenearest=1;2",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:3<swsh_RC>?scalenearest=1;2?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:3<swsh_RC>?scalenearest=3;1.5",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5?flipxy",
+									"frameProperties": {
+										"image": [
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:3<swsh_RC>?scalenearest=1;2", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:3<swsh_RC>?scalenearest=1;2?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:3<swsh_RC>?scalenearest=3;1.5", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5?flipxy", 
 											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:3<swsh_RC>?scalenearest=3;1.5?flipxy"
 										]
 									},
@@ -1169,39 +1127,27 @@
 					},
 					"swoosh2": {
 						"properties": {
-							"zLevel": 1, "fullbright":true,
+							"zLevel": 1,
+							"fullbright": true,
 							"transformationGroups": ["swoosh"]
 						},
 						"partStates": {
 							"swoosh": {
 								"idle": {},
-								"fire3": {
-									"frameProperties":{
-										"image":[
-										"",
-										"",
-										""
-										]
-									},
-									"properties": {
-										"damageArea": [[-4.75, 1.5], [3, 1], [3, -1], [-4.75, -1.5]],
-										"offset": [-1.5, -3]
-									}
-								},
 								"fire8": {
-									"frameProperties":{
-										"image":[
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:3<swsh_RC>?scalenearest=3;1.5?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5",
-											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:3<swsh_RC>?scalenearest=3;1.5",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:3<swsh_RC>?scalenearest=1;2?flipxy",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2",
-											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2",
+									"frameProperties": {
+										"image": [
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:3<swsh_RC>?scalenearest=3;1.5?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5", 
+											"/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:3<swsh_RC>?scalenearest=3;1.5", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:3<swsh_RC>?scalenearest=1;2?flipxy", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2", 
+											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2", 
 											"/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:3<swsh_RC>?scalenearest=1;2"
 										]
 									},
@@ -1239,7 +1185,7 @@
 									"position": [0.2, 0.2]
 								}
 							}
-						},{
+						}, {
 							"particle": {
 								"image": "/cinematics/story/moon.png?setcolor=e76087?multiply=CCC5",
 								"layer": "middle",
@@ -1283,7 +1229,7 @@
 									"position": [0.2, 0.2]
 								}
 							}
-						},{
+						}, {
 							"particle": {
 								"image": "/cinematics/story/moon.png?setcolor=e76087?multiply=CCC2",
 								"layer": "middle",

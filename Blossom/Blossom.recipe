@@ -11,7 +11,7 @@
 			"scripts": ["/Blossom/meleeweapon.lua"],
 			"animationScripts": ["/items/active/effects/chain.lua"],
 			"inventoryIcon": "/interface/statuses/attack.png?crop=0;0;1;1?multiply=0000?replace;0000=4444?border=1;ccc0;0000?scale=.8;.6?replace;0000=007878;4440=008878;8881=088;9990=007888?scale=1;15.5?crop=0;0;2;16?replace;008778=007878;008788=007888?scale=15.5;1?crop=0;0;16;16?replace;00787a=000;00787b=001;00787c=001;00787d=001;00787e=001;00787f=001;007880=001;007881=001;007882=001;007883=001;007884=001;007885=000;007979=000;00797a=002;00797b=002;00797c=002;00797d=002;00797e=002;00797f=002;007980=002;007981=002;007982=002;007983=002;007984=002;007985=002;007986=000;007a78=000;007a79=002;007a7a=003;007a7b=004;007a7c=002;007a7d=002;007a7e=002;007a7f=002;007a80=002;007a81=002;007a82=002;007a83=000;007a84=001;007a85=000;007a86=002;007a87=000;007b78=001;007b79=002;007b7a=003;007b7b=001;007b7c=000;007b7d=002;007b7e=002;007b7f=003;007b80=002;007b81=002;007b82=000;007b83=001;007b84=001;007b85=000;007b86=002;007b87=001;007c78=001;007c79=002;007c7a=002;007c7b=001;007c7c=001;007c7d=004;007c7e=005;007c7f=004;007c80=002;007c81=000;007c82=000;007c83=001;007c84=001;007c85=000;007c86=002;007c87=001;007d78=001;007d79=002;007d7a=002;007d7b=002;007d7c=000;007d7d=005;007d7e=003;007d7f=006;007d81=000;007d82=000;007d83=001;007d84=000;007d85=002;007d86=002;007d87=001;007e78=001;007e79=002;007e7a=002;007e7b=002;007e7c=004;007e7d=005;007e7e=004;007e7f=006;007e80=007;007e82=000;007e83=001;007e84=002;007e85=002;007e86=002;007e87=001;007f78=001;007f79=002;007f7a=002;007f7b=002;007f7c=008;007f7d=005;007f7e=006;007f7f=006;007f80=007;007f81=009;007f82=005;007f83=002;007f84=002;007f85=002;007f86=002;007f87=001;008078=001;008079=002;00807a=002;00807b=002;00807c=002;00807d=003;00807e=000;00807f=000;008080=007;008081=009;008082=009;008083=005;008084=002;008085=002;008086=002;008087=001;008178=001;008179=002;00817a=002;00817b=002;00817c=006;00817d=007;00817e=006;00817f=000;008180=000;008181=009;008182=009;008183=006;008184=005;008185=002;008186=002;008187=001;008278=001;008279=002;00827a=002;00827b=008;00827c=006;00827d=009;00827e=006;00827f=006;008280=000;008281=002;008282=009;008283=007;008284=006;008285=005;008286=002;008287=001;008378=001;008379=002;00837a=008;00837b=004;00837c=008;00837d=009;00837e=007;00837f=007;008380=002;008381=002;008382=002;008383=007;008384=006;008385=005;008386=002;008387=001;008478=001;008479=002;00847a=008;00847b=004;00847c=005;00847d=004;00847e=006;00847f=002;008480=002;008481=002;008482=002;008483=002;008484=006;008485=005;008486=002;008487=001;008578=000;008579=002;00857a=002;00857b=008;00857c=005;00857d=003;00857e=004;00857f=002;008580=002;008581=002;008582=002;008583=002;008584=002;008585=005;008586=002;008587=000;008679=000;00867a=002;00867b=002;00867c=008;00867d=004;00867e=002;00867f=002;008680=002;008681=002;008682=002;008683=002;008684=002;008685=002;008686=000?multiply=fff0?replace;0000=b19ba8;0010=fff0ff;0020=181924;0030=d6bc6c;0040=936a29;0050=fcf9c1;0060=6a2c69;0070=ba3669;0080=562f13;0090=e76087;007d8000=ffbac2;007e8100=ffbac2",
-			"shortdescription": "^#ffbac2;\"Blossom\"",
+			"shortdescription": "^#ffbac2;\"Blossom\"^reset;",
 			"description": "^gray;A ceremonial sword, presiding over the Rite of Transience.\n^#e76087;[PRIMARY] ^#eee;grants ^#ffbac2;Charges^#eee;, ^#e76087;[ALT] ^#eee;consumes ^#ffbac2;Charges ^#eee;to perform a forward slice.",
 			"category": "uniqueWeapon",
 			"rarity": "essential",
@@ -133,7 +133,8 @@
 						"aimAngle": 0,
 						"animationStates": {
 							"pinkKatana": "sheathing",
-							"swoosh": "idle"
+							"swoosh": "idle",
+							"swoosh_ring": "idle"
 						}
 					},
 					"windup1": {
@@ -773,12 +774,6 @@
 									"cycle": 0.1,
 									"frames": 3,
 									"transition": "idle"
-								},
-								"ringGuard": {
-									"mode": "transition",
-									"cycle": 0.1,
-									"frames": 3,
-									"transition": "idle"
 								}
 							},
 							"default": "idle"
@@ -1004,12 +999,6 @@
 											"image": "<swp>:<frame><swsh_RC>"
 										}
 									},
-									"ringGuard": {
-										"properties": {
-											"offset": [0, 1],
-											"image": "<swp>:<frame><swsh_RC>"
-										}
-									},
 									"idle": {
 										"properties": {
 											"image": ""
@@ -1030,12 +1019,6 @@
 									"ring": {
 										"properties": {
 											"offset": [0, 0.35],
-											"image": "<swp>:<frame>?flipxy<swsh_RC>"
-										}
-									},
-									"ringGuard": {
-										"properties": {
-											"offset": [0, 1],
 											"image": "<swp>:<frame>?flipxy<swsh_RC>"
 										}
 									},
@@ -1146,15 +1129,6 @@
 							"partStates": {
 								"swoosh": {
 									"idle": {},
-									"fire3": {
-										"frameProperties": {
-											"image": ["", "", ""]
-										},
-										"properties": {
-											"damageArea": [[-4.75, 1.5], [3, 1], [3, -1], [-4.75, -1.5]],
-											"offset": [-1.5, -3]
-										}
-									},
 									"fire8": {
 										"frameProperties": {
 											"image": ["/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5?flipxy", "/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5?flipxy", "/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:3<swsh_RC>?scalenearest=3;1.5?flipxy", "/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:1<swsh_RC>?scalenearest=3;1.5", "/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:2<swsh_RC>?scalenearest=3;1.5", "/items/active/weapons/melee/broadsword/swoosh2/physicalswoosh.png:3<swsh_RC>?scalenearest=3;1.5", "/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2?flipxy", "/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2?flipxy", "/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:3<swsh_RC>?scalenearest=1;2?flipxy", "/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:1<swsh_RC>?scalenearest=1;2", "/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:2<swsh_RC>?scalenearest=1;2", "/items/active/weapons/melee/broadsword/swoosh/physicalswoosh.png:3<swsh_RC>?scalenearest=1;2"]

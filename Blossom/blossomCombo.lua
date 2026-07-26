@@ -73,39 +73,19 @@ function BlossomCombo:update(dt, fireMode, shiftHeld, moves)
 	
 	sheathPart()
 	self.inflictedDamage:update()
-	updateCursor()
-	--player.say(charges)
-  
+	
+	--thing that updates the cursor
+	activeItem.setCursor("/cursors/blossomCursor"..blossomCharges..".cursor") 
+
 	if self.fireMode == "alt" and not self.weapon.currentAbility then
 		 if blossomCharges >= 2
-		 --charges >= 2 
-		 --[[
-		 or status.overConsumeResource("energy", status.resourceMax("energy")/2) 
-		 or status.consumeResource("health", status.resourceMax("health")/4) 
-		 ]]
 		 then 
-			--if charges >= 2 then 
 			blossomCharges = blossomCharges - 2 
 			if blossomCharges < 0 then blossomCharges = 0 end 
-			--charges = charges - 2 if charges < 0 then charges = 0 end 
-			--end
-			--status.setStatusProperty("blossomSkillCharges", blossomCharges)
 			activeItem.setInstanceValue("blossomSkillCharges", blossomCharges)
 			self:setState(self.altWindup) altActive = true
 		 return false end
 	end
-  --[[
-	if self.fireMode == "primary" and self.shiftHeld and not self.weapon.currentAbility and mcontroller.onGround() and status.overConsumeResource("energy", self.thrustDamageConfig.energyUsage) then
-		self:setState(self.thrustWindup)
-	end
-	if self.fireMode == "primary" and self.shiftHeld and not self.weapon.currentAbility and not mcontroller.onGround() and status.overConsumeResource("energy", self.slashDashDamageConfig.energyUsage) then
-		self:setState(self.slashDashWindup)
-	end
-	if self.fireMode == "alt" and not self.weapon.currentAbility then
-		if self.shiftHeld and status.overConsumeResource("energy", self.cleaveDamageConfig.energyUsage) then self:setState(self.cleaveWindup) else self:setState(self.guard) end
-	end
-  ]]
-
   
   if self.cooldownTimer > 0 then
     self.cooldownTimer = math.max(0, self.cooldownTimer - self.dt)
@@ -138,15 +118,12 @@ function inflictedDamageCallback(notifications)
           eventFields.damageSourceKind = notification.damageSourceKind
           if entityType == "npc" or entityType == "monster" or entityType == "player" then
 				if self.comboStep == 4 or self.comboStep == 5 or self.comboStep == 6 then airBounce(25) end
-				--if primaryActive then end
 				world.spawnProjectile("pillarspawner", entityPos, entity.id(), aimVector, false, petals)
 				if altActive then 
 					world.spawnProjectile("pillarspawner", entityPos, entity.id(), aimVector, false, hitParamAlt)
 				else
 					blossomCharges = blossomCharges + 1 if blossomCharges > 6 then blossomCharges = 6 end
-					--status.setStatusProperty("blossomSkillCharges", blossomCharges)
 					activeItem.setInstanceValue("blossomSkillCharges", blossomCharges)
-					--charges = charges + 1 if charges > 6 then charges = 6 end
 					world.spawnProjectile("pillarspawner", entityPos, entity.id(), aimVector, false, hitParamPrimary)
 				end
 				--break  //makes it only affect one at a  time
@@ -319,14 +296,10 @@ end
 function BlossomCombo:uninit()
 	--primaryActive = false
 	altActive = false
-	--world.sendEntityMessage(activeItem.ownerEntityId(), "comboInactive")
+	if status.statPositive("activeMovementAbilities") then mcontroller.setVelocity({mcontroller.velocity()[1]*0.3, mcontroller.velocity()[2]*0.3}) end
+	if dashed then mcontroller.setVelocity({10 * self.weapon.aimDirection * math.cos(self.weapon.aimAngle), 25 * math.sin(self.weapon.aimAngle)}) dashed = nil end
 	status.clearPersistentEffects("movementAbility")
 	self.weapon:setDamage()
-end
-
-function updateCursor()
-	activeItem.setCursor("/cursors/blossomCursor"..blossomCharges..".cursor") 
-	--activeItem.setCursor("/cursors/blossomCursor"..charges..".cursor") 
 end
 
 --timer from najja
@@ -479,62 +452,6 @@ function slowFall(xVelDiv, yVelDiv)
 	if mcontroller.yVelocity() < 0 and not mcontroller.groundMovement() and not status.resourceLocked("energy") then
 		mcontroller.controlApproachVelocity({mcontroller.xVelocity()/divX,mcontroller.yVelocity()/divY}, 225)
 	end
-end
-
-function forceCrouch()
-	if mcontroller.groundMovement() then
-		mcontroller.controlCrouch(true)
-		else 
-		mcontroller.controlCrouch(false)
-	end
-end
-
-function airBounce(bounce)
-    if not mcontroller.onGround() and mcontroller.liquidPercentage() < 1 and not status.resourceLocked("energy")  then
-		mcontroller.setYVelocity(bounce)
-    end
-end
-
-function backSlide(speed)
-	if mcontroller.xVelocity() == 0 and mcontroller.groundMovement() then
-		mcontroller.addMomentum({speed*-face, 0})
-	end
-end
-
----from the vanilla tech blinkdash.lua
-function findTargetPosition(dir, maxDist)
-  local dist = 1
-  local targetPosition
-  local collisionPoly = mcontroller.collisionPoly()
-  local testPos = mcontroller.position()
-  while dist <= maxDist do
-    testPos[1] = testPos[1] + dir
-    if not world.polyCollision(collisionPoly, testPos, {"Null", "Block", "Dynamic", "Slippery"}) then
-      local oneDown = {testPos[1], testPos[2] - 1}
-      if not world.polyCollision(collisionPoly, oneDown, {"Null", "Block", "Dynamic", "Platform"}) then
-        testPos = oneDown
-      end
-    else
-      local oneUp = {testPos[1], testPos[2] + 1}
-      if not world.polyCollision(collisionPoly, oneUp, {"Null", "Block", "Dynamic", "Slippery"}) then
-        testPos = oneUp
-      else
-        break
-      end
-    end
-    targetPosition = testPos
-    dist = dist + 1
-  end
-
-  if targetPosition then
-    local towardGround = {testPos[1], testPos[2] - 0.8}
-    local groundPosition = world.resolvePolyCollision(collisionPoly, towardGround, 0.8, {"Null", "Block", "Dynamic", "Platform"})
-    if groundPosition and not (groundPosition[1] == towardGround[1] and groundPosition[2] == towardGround[2]) then
-      targetPosition = groundPosition
-    end
-  end
-
-  return targetPosition
 end
 
 ---from the vanilla markedshot.lua
@@ -1125,27 +1042,18 @@ function BlossomCombo:altFire()
 	self.weapon:setStance(self.stances.altFire)
 	self.weapon:updateAim()
   
-	--[[
-	local originalPos = mcontroller.position()
-	local targetPos = findTargetPosition(mcontroller.facingDirection(), 10)
-	]]
-	
 	mcontroller.setVelocity({15 * self.weapon.aimDirection * math.cos(self.weapon.aimAngle), 25 * math.sin(self.weapon.aimAngle)})
 	status.addEphemeralEffect("invulnerable", self.stances.altFire.duration+0.1)
 	animator.setAnimationState("swoosh", "altFire")
 	animator.playSound("altFire")
 	util.wait(self.stances.altFire.duration, function()
-		--slowFall()
 		moveRunJumpSuppress(true, true, true)
 		
 		local damageArea = partDamageArea("swoosh")
 		self.weapon:setDamage(self.altConfig, damageArea)
 		
-		--<^#d16b17;Maple^reset;> By default it's 0.02 and 0.03
-		--mcontroller.controlParameters({maximumPlatformCorrection=0.01,maximumPlatformCorrectionVelocityFactor=0.03/math.max(1,math.abs(mcontroller.xVelocity())/5)})
 		q_dash(150)
 	end)
-	--mcontroller.setVelocity({15 * self.weapon.aimDirection * math.cos(self.weapon.aimAngle), 25 * math.sin(self.weapon.aimAngle)})
 	
 	self:setState(self.altAfterFire)
 end
@@ -1182,72 +1090,6 @@ function BlossomCombo:altWait()
 		self.weapon:setStance(self.stances.idle)
 	--end
 end
-
---[[
-function BlossomCombo:altWindup2()
-	self.weapon:setStance(self.stances.altWindup2)
-	self.weapon:updateAim()
-	
-	local stance = self.stances.altWindup2
-	if stance.hold then
-		while self.fireMode == "alt" do
-			coroutine.yield()
-		end
-	else
-		util.wait(self.stances.altWindup2.duration, function()
-		end)
-	end
-	
-	self:setState(self.altPreslash2)
-end
-function BlossomCombo:altPreslash2()
-	self.weapon:setStance(self.stances.altPreslash2)
-	self.weapon:updateAim()
-	util.wait(self.stances.altPreslash2.duration, function() 
-		local dashSpeed = -170
-		local xspeed = dashSpeed  * self.weapon.aimDirection * math.cos(self.weapon.aimAngle)
-		local yspeed = dashSpeed * math.sin(self.weapon.aimAngle)
-		mcontroller.setVelocity({xspeed, yspeed})
-	end)	
-	self:setState(self.altFire2)
-end
-function BlossomCombo:altFire2()
-	self.weapon:setStance(self.stances.altFire2)
-	self.weapon:updateAim()
-	
-	mcontroller.setVelocity({15 * self.weapon.aimDirection * math.cos(self.weapon.aimAngle), 25 * math.sin(self.weapon.aimAngle)})
-	--status.setPersistentEffects("movementAbility", {{stat = "activeMovementAbilities", amount = 1}})
-	--status.addEphemeralEffect("invulnerable", self.stances.altFire2.duration+0.1)
-	animator.setAnimationState("swoosh", "altFire")
-	animator.playSound("altFire")
-	util.wait(self.stances.altFire2.duration, function()
-		--slowFall()
-		--moveRunJumpSuppress(false, true, true)
-		local damageArea = partDamageArea("swoosh")
-		self.weapon:setDamage(self.altConfig, damageArea)
-	end)
-	
-	self:setState(self.altAfterFire2)
-end
-function BlossomCombo:altAfterFire2()
-	self.weapon:setStance(self.stances.altAfterFire2)
-	self.weapon:updateAim()
-	util.wait(self.stances.altAfterFire2.duration, function() end)	
-	self:setState(self.altWait2)
-end
-function BlossomCombo:altWait2()
-	self.weapon:setStance(self.stances.altWait2)
-	self.weapon:updateAim()
-	--status.clearPersistentEffects("movementAbility")
-	util.wait(self.stances.altWait2.duration, function() 
-		if self:shouldActivate() then
-			self:setState(self.windup)
-			return
-		end
-	end)	
-	self.weapon:setStance(self.stances.idle)
-end
-]]
 
 	--	//	SHEATH
 function draw_part(data)

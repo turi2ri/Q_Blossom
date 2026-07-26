@@ -1,0 +1,12 @@
+{
+  "author" : "^cornflowerblue;Moonquill ^#ccc;(turi2ri)",
+  "description" : "adds the titular \"Blossom\" Katana\n\nobtainable via treasured trophies for 1 violium broadsword and 5 upgrade modules\nor hand crafting while /admin is active",
+  "friendlyName" : "^#ffbac2;\"Blossom\"",
+  "icon" : "/Q_Blossom_modicon.png",
+  "link" : "steam://url/CommunityFilePage/3770567222",
+  "name" : "q_blossom",
+  "priority" : -1,
+  "steamContentId" : "3770567222",
+  "tags" : "Weapons",
+  "version" : "1.0"
+}
